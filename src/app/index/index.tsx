@@ -16,9 +16,9 @@ export default function Index() {
         </TouchableOpacity>
       </View>
 
-      <Category icon="code" name="Projetos" />
-      <Category icon="language" name="Site" />
-      <Category icon="movie" name="Video" />
+      <Category icon="code" name="Projetos" isSelected />
+      <Category icon="language" name="Site" isSelected={false} />
+      <Category icon="movie" name="Video" isSelected={false} />
     </View>
   );
 }
