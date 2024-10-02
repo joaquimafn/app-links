@@ -6,7 +6,7 @@ import { styles } from "./styles";
 type CategoriesProp = PressableProps & {
   icon: keyof typeof MaterialIcons.glyphMap;
   name: string;
-  isSelected: boolean;
+  isSelected?: boolean;
 };
 
 export function Category(props: CategoriesProp) {

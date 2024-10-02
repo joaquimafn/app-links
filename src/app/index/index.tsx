@@ -4,6 +4,8 @@ import { styles } from "./styles";
 import { colors } from "@/styles/colors";
 
 import { Category } from "@/components/category";
+import { categories } from "@/utils/categories";
+import { Categories } from "@/components/categories";
 
 export default function Index() {
   return (
@@ -16,9 +18,11 @@ export default function Index() {
         </TouchableOpacity>
       </View>
 
-      <Category icon="code" name="Projetos" isSelected />
-      <Category icon="language" name="Site" isSelected={false} />
-      <Category icon="movie" name="Video" isSelected={false} />
+      {/* {categories.map((category) => (
+        <Category key={category.id} name={category.name} icon={category.icon} />
+      ))} */}
+
+      <Categories />
     </View>
   );
 }
