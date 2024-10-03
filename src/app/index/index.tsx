@@ -1,3 +1,4 @@
+import React from "react";
 import {
   View,
   Image,
@@ -15,6 +16,8 @@ import { Link } from "@/components/link";
 import { Option } from "@/components/option";
 
 export default function Index() {
+  const [visible, setVisible] = React.useState(false);
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -34,20 +37,20 @@ export default function Index() {
           <Link
             name="RocketSeat"
             url="https://teste.com"
-            onDetails={() => console.log("clicou")}
+            onDetails={() => setVisible(true)}
           />
         )}
         style={styles.links}
         contentContainerStyle={styles.linksContent}
       />
 
-      <Modal transparent visible>
+      <Modal transparent visible={visible}>
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalCategory}>Curso</Text>
 
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => setVisible(false)}>
                 <MaterialIcons
                   name="close"
                   size={20}
